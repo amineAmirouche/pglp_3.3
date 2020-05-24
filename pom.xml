@@ -53,6 +53,48 @@
           <version>3.0.2</version>
         </plugin>
         <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+					<manifest>
+					<mainClass>uvsq.pglp_3_3.App</mainClass>
+					</manifest>
+					</archive>
+				</configuration>
+
+			</plugin>
+			 <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+			
+		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+					<manifest>
+					<mainClass>uvsq.pglp_3_3.App</mainClass>
+					</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<id>standalone</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
         </plugin>
@@ -72,4 +114,16 @@
       </plugins>
     </pluginManagement>
   </build>
+   <reporting>
+	<plugins>
+		<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-javadoc-plugin</artifactId>
+		<version>3.2.0</version>
+		<configuration>
+		
+		</configuration>
+		</plugin>
+	</plugins>
+  </reporting>
 </project>
