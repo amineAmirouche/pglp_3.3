@@ -9,12 +9,27 @@ import org.junit.Test;
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void testConstructeurDynamiqueRobot() {
+			DynamiqueRobot rb=new DynamiqueRobot(1,5);
+			assert(rb.orientation==1 && rb.position==1);		
+	}
+	
+	@Test
+	public void testConstructeurStatiqueRobot() {
+			StatiqueRobot rb=new StatiqueRobot(1,5);
+			assert(rb.orientation==1 && rb.position==1);		
+	}
+	@Test
+	public void testConstructeurDynamiqueOrientientation() {
+			DynamiqueRobot rb=new DynamiqueRobot(5,5);
+			assert(rb.orientation==1 && rb.position==5);		
+	}
+	@Test
+	public void testConstructeurStatiqueOrientation() {
+			DynamiqueRobot rb=new DynamiqueRobot(6,5);
+			assert(rb.orientation==1 && rb.position==6);		
+	}
+	
+	
 }
