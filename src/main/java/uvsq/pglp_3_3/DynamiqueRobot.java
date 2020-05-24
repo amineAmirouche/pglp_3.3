@@ -6,9 +6,9 @@ public class DynamiqueRobot extends Robot {
 	   * @param position : la position actuelle du robot
 	   * @param orientation : l'orientation actuelle du robot
 	   */
-	  public DynamiqueRobot(int position, int orientation) {
-	    position = position;
-	    orientation = orientation % 4;
+	  public DynamiqueRobot(int positionn, int orientationn) {
+	    position = positionn;
+	    orientation = orientationn % 4;
 	  }
 
 	  /**
